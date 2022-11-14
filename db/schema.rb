@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_14_125011) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_14_135633) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,11 +18,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_125011) do
     t.string "name"
     t.string "icon"
     t.bigint "author_id", null: false
-    t.bigint "payment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_categories_on_author_id"
-    t.index ["payment_id"], name: "index_categories_on_payment_id"
+  end
+
+  create_table "category_payments", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "payment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_payments_on_category_id"
+    t.index ["payment_id"], name: "index_category_payments_on_payment_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -52,7 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_125011) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "categories", "payments"
   add_foreign_key "categories", "users", column: "author_id"
+  add_foreign_key "category_payments", "categories"
+  add_foreign_key "category_payments", "payments"
   add_foreign_key "payments", "users", column: "author_id"
 end

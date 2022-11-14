@@ -1,0 +1,9 @@
+<ul>
+  <% @categories.each do |category| %>
+      <li>
+        <img src="<%= category.icon %>" alt="[<%= category.name.downcase %> icon]">
+        <span><%= category.name %></span>
+        <span>$<%= category.total_price %></span>
+      </li>
+  <% end %>
+</ul>
