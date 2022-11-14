@@ -4,4 +4,8 @@ class Category < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  def total_price
+    category_payments.sum { |cp| cp.payment.amount }
+  end
 end

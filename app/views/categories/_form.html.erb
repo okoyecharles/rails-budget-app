@@ -1,0 +1,13 @@
+<%= form_with model: @category, method: :post, scope: :new_category do |f| %>
+  <div>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Category name' %>
+  </div>
+
+  <div>
+    <%= f.label :icon %> <br>
+    <%= f.text_field :icon, autofocus: true, placeholder: 'Icon image URL' %>
+  </div>
+
+  <%= f.submit 'Create' %>
+<% end %>
