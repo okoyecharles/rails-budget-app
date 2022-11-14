@@ -1,0 +1,13 @@
+<section>
+  <h1>Categories</h1>
+  <% unless @categories.empty? %>
+    <p>Here is a list of all categories!</p>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><%= category.id %> <%= category.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No categories available</p>
+  <% end %>
+</section>
