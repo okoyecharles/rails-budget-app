@@ -6,6 +6,9 @@ ruby '3.1.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
+# Use devise for user authentication
+gem 'devise'
+
 # rubocop for linting during development
 gem 'rubocop', '>= 1.0', '< 2.0'
 
