@@ -8,7 +8,7 @@
 Here is the [live link](https://sleepy-hamlet-84522.herokuapp.com/) for the project.
 
 # Video link
-Here is the [video link](https://www.loom.com/share/9abe2b134f9e42bc972c1504726b7b10) for the project.
+Here is the [video link](https://www.loom.com/share/be262b368dde4fd8b896ab28dfe390bd) for the project.
 
 # Getting Started
 
