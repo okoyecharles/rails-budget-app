@@ -1,5 +1,7 @@
 <section>
-  <%# <p>Total price: $<%= @category.total_price %>
+  <h2 class="text-center">Payments</h2>
+  <div class="text-secondary text-center">Category - <%= @category.name %></div>
+  <p>Total price: $<%= @category.total_price %></p>
   <% unless @payments.empty? %>
     <%= render 'list' %>
   <% else %>

@@ -13,4 +13,8 @@ class Category < ApplicationRecord
   def total_price
     payments.sum(&:amount)
   end
+
+  def payments_count
+    payments.count
+  end
 end
