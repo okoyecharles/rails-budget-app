@@ -1,33 +1,14 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Budget-app project
 
 > This is a ruby on rails mobile web application where you can manage your budget: you have a list of payments associated with a category, so that you can see how much money you spent and on what.
 
+# Live link
+Here is the [live link](https://sleepy-hamlet-84522.herokuapp.com/) for the project.
+
 # Video link
-Here is the [video link](https://www.loom.com/share/50871a7a78944e64bc78acc36f6356bc) for the project.
+Here is the [video link](https://www.loom.com/share/9abe2b134f9e42bc972c1504726b7b10) for the project.
 
 # Getting Started
 
