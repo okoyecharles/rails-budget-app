@@ -1,0 +1,14 @@
+<ul class="d-flex flex-column gap-4">
+  <% @categories.each do |category| %>
+      <%= link_to category_payments_path(category), class: 'text-decoration-none' do %>
+        <li class="border border-light shadow-sm rounded p-3 d-flex gap-2">
+          <img src="<%= category.icon %>" width="50" height="50" alt="[icon]" class="w-20"/>
+          <div class="d-flex flex-column justify-content-between w-100">
+            <span class="fs-2"><%= category.name %></span>
+            <span class="fs-6"><%= category.created_at.strftime('%d %b %Y') %></span>
+          </div>
+          <span><%= pluralize(category.payments_count, 'payment') %></span>
+        </li>
+      <% end %>
+  <% end %>
+</ul>

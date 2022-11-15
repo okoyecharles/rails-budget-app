@@ -1,0 +1,13 @@
+<%= form_with model: @category, method: :post, scope: :new_category, html: {class: 'd-flex flex-column gap-3'} do |f| %>
+  <div>
+    <%= f.label :name, class: 'form-label' %> <br>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Category name', class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= f.label :icon, class: 'form-label' %> <br>
+    <%= f.text_field :icon, autofocus: true, placeholder: 'Icon image URL', class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Create', class: 'btn bg-pri w-100 text-light' %>
+<% end %>

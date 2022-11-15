@@ -1,0 +1,20 @@
+<%= form_with model: @payment, method: :post, scope: :new_payment do |f| %>
+  <div>
+    <%= f.label :name, class: 'form-label' %> <br>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Payment name', class: 'form-control', required: true %>
+  </div>
+
+  <div>
+    <%= f.label :amount, class: 'form-label' %> <br>
+    <%= f.number_field :amount, autofocus: true, placeholder: 'Payment amount ($)', class: 'form-control', required: true %>
+  </div>
+  
+  <div>
+    <%= f.fields_for :category_payments do |cp| %>
+      <%= cp.label :category_ids, 'Categories (atleast one)', class: 'form-label' %> <br>
+      <%= cp.collection_select :category_ids, @all_categories, :id, :name, {}, { multiple: true, required: true, class: 'form-select', size: 2 } %>
+    <% end %>
+  </div>
+
+  <%= f.submit 'Create', class: 'btn bg-pri w-100 text-light mt-4' %>
+<% end %>

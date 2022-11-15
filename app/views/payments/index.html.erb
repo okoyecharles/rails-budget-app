@@ -1,0 +1,11 @@
+<section>
+  <h2 class="text-center">Payments</h2>
+  <div class="text-secondary text-center">Category - <%= @category.name %></div>
+  <p>Total price: $<%= @category.total_price %></p>
+  <% unless @payments.empty? %>
+    <%= render 'list' %>
+  <% else %>
+    <p>No payments available</p>
+  <% end %>
+  <%= link_to 'Add a new payment', new_payment_path, class: 'btn bg-sec w-100 text-light' %>
+</section>
