@@ -9,11 +9,11 @@
   color: #434b54;
 }
 
-.bg-primary {
+.bg-pri {
   background: #3778c2 !important;
 }
 
-.bg-secondary {
+.bg-sec {
   background: #5fb523 !important;
 }
 
@@ -27,4 +27,9 @@ a {
 
 main > section {
   min-height: 85vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 !important;
 }
