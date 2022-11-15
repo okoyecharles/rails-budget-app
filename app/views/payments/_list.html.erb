@@ -1,0 +1,8 @@
+<ul>
+  <% @payments.each do |payment| %>
+    <li>
+      <span><%= payment.name %></span>
+      <span>$<%= payment.amount %></span>
+    </li>
+  <% end %>
+</ul>

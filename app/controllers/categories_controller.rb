@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @categories = Category.all
+    @categories = current_user.categories.includes(%i[category_payments payments])
   end
 
   def new
