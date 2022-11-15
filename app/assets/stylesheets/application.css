@@ -17,16 +17,19 @@
   background: #5fb523 !important;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 500;
 }
 
 a {
-  color: #252f3a!important;
+  color: #252f3a !important;
 }
 
 main > section {
-  min-height: 85vh;
+  min-height: 70vh;
 }
 
 ul {
