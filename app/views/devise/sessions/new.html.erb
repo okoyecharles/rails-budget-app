@@ -1,19 +1,14 @@
-<h2>Log in</h2>
+<h2 class="text-center">Log In</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {'data-turbo' => "false"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {'data-turbo' => "false", class: 'd-flex flex-column gap-3'}) do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: 'form-label' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email address', class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -24,7 +19,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'btn bg-pri text-light w-100 mb-4' %>
   </div>
 <% end %>
 

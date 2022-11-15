@@ -1,33 +1,33 @@
-<h2>Sign up</h2>
+<h2 class="text-center">Sign Up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {'data-turbo' => "false"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {'data-turbo' => "false", class: 'd-flex flex-column gap-3'}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.label :name, class: 'form-label' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" , placeholder: 'Full Name', class: 'form-control'%>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: 'form-label' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: 'Email address', class: 'form-control'%>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, class: 'form-label' %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password" , placeholder: 'Password', class: 'form-control'%>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, class: 'form-label' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" , placeholder: 'Password confirmation', class: 'form-control'%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'btn bg-pri text-light w-100 mb-4' %>
   </div>
 <% end %>
 

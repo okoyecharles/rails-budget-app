@@ -1,6 +1,6 @@
-<ul>
+<ul class="d-flex flex-column gap-4">
   <% @payments.each do |payment| %>
-    <li>
+    <li class="border border-light shadow-sm rounded p-3 d-flex justify-content-between">
       <span><%= payment.name %></span>
       <span>$<%= payment.amount %></span>
     </li>
