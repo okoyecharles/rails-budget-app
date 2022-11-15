@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @category = Category.find(params[:category_id])
     @payments = @category.recent_payments
@@ -6,7 +8,7 @@ class PaymentsController < ApplicationController
 
   def new
     @payment = Payment.new
-    @all_categories = Category.all
+    @all_categories = current_user.categories
     @category_payment = @payment.category_payments.build
   end
 
